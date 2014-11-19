@@ -1,4 +1,5 @@
-﻿using StructureMap.Configuration.DSL;
+﻿using EpiContentTestingApi.Services;
+using StructureMap.Configuration.DSL;
 
 namespace EpiContentTestingApi
 {
@@ -6,6 +7,8 @@ namespace EpiContentTestingApi
     {
         public ModuleRegistry()
         {
+            For<IPageService>().Use<PageService>();
+            For<IBlockService>().Use<BlockService>();
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Web.Http;
 using EpiControlTestingApi.Common;
-using EPiServer.Core;
 
-namespace EpiContentTestingApi.Controllers
+namespace EpiContent.Api.Controllers
 {
     public class BlockController : ApiController
     {

@@ -1,9 +1,10 @@
 ﻿using System.Web.Http;
+using System.Web.Http.Results;
 using EpiContentTestingApi.Services;
 using EpiControlTestingApi.Common;
 using EPiServer.ServiceLocation;
 
-namespace EpiContentTestingApi.Controllers
+namespace EpiContent.Api.Controllers
 {
     public class PageController : ApiController
     {
@@ -14,9 +15,10 @@ namespace EpiContentTestingApi.Controllers
             service = ServiceLocator.Current.GetInstance<IPageService>();
         }
 
-        public PageDto Add(PageDto page)
+        public OkNegotiatedContentResult<PageDto> Add(PageDto page)
         {
-            return service.Add(page);
+            var result = service.Add(page);
+            return Ok(result);
         }
     }
 }

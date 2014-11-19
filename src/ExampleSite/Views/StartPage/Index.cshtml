@@ -1,0 +1,5 @@
+@using EPiServerSite2
+@using ExampleSite
+@model ExampleSite.Models.ViewModels.PageViewModel<ExampleSite.Models.Pages.StartPage>
+
+@Html.PropertyFor(x => x.CurrentPage.MainContentArea, new { CssClass = "row equal-height", tag = ContentAreaTags.FullWidth })
