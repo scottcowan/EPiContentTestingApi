@@ -290,6 +290,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EpiContentTestingApi\EpiContent.Api.csproj">
+      <Project>{53d271bd-79cb-4668-b021-43e0e6c77696}</Project>
+      <Name>EpiContent.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">

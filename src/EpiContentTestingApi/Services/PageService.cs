@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using EpiControlTestingApi.Common;
 using EPiServer;
@@ -19,7 +18,6 @@ namespace EpiContentTestingApi.Services
         public PageService()
         {
             contentRepository = ServiceLocator.Current.GetInstance<IContentRepository>();
-            finder = ServiceLocator.Current.GetInstance<IPageFinder>();
 
         }
 

@@ -1,40 +1,40 @@
-using System;
+using System.Text;
+using System.Web.UI.WebControls;
 using EpiControlTestingApi.Common;
 
-namespace EpiContentTestingApi.Services
+namespace EpiContent.Api.Services
 {
     public interface IBlockService
     {
         BlockDto Add(BlockDto block);
     }
 
-    public class BlockService : IBlockService
+    public static class StringExtensions
     {
-        public BlockDto Add(BlockDto block)
+        public static string AddSpancesToSentence(this string text)
         {
-            // block title
-            // find page
-            // clone page
-            // get containing block
-            // get content area
-            // check if the block already exists
-            // create new block
-            // clear any content areas
-            
-            // foreach property in BlockDto
-            // Set Name
-            // Add categories
-            // Set System.
-            // Set PageReference
-            // Set XHtmlString
-            // Set Enum
-            // Set Url
-            // Set Nested object
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                return string.Empty;
+            }
 
-            // save clone page (pub,noaccess)
-            // save parent block
+            var newText = new StringBuilder(text.Length*2);
+            newText.Append(text[0]);
+            for (int i = 1; i < text.Length; i++)
+            {
+                if (char.IsUpper(text[i]))
+                {
+                    if ((text[i - 1] != ' ' && !char.IsUpper(text[i - 1])))
+                    {
+                        newText.Append(' ');
+                    }
+                }
 
-            throw new Exception();
+                newText.Append(text[i]);
+            }
+            {
+                
+            }
         }
     }
 }

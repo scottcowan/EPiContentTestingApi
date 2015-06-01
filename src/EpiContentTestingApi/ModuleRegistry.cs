@@ -1,4 +1,5 @@
-﻿using EpiContentTestingApi.Services;
+﻿using EpiContent.Api.Services;
+using EpiContentTestingApi.Services;
 using StructureMap.Configuration.DSL;
 
 namespace EpiContentTestingApi
